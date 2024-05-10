@@ -1,4 +1,4 @@
-# Revolutionizing Domain-Specific Tasks with RAFT: A Deep Dive into Retrieval-Augmented Fine Tuning
+# Revolutionizing Domain Specific Tasks with RAFT: A Deep Dive into Retrieval-Augmented Fine Tuning
 
 # Blog outline
 
