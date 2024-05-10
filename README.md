@@ -100,6 +100,6 @@ The impact of RAFT is quantifiable across multiple benchmarks. For instance, in 
 #  Conclusion
 RAFT represents a significant leap forward in the application of large language models for domain-specific tasks. By enabling models to utilize external information effectively and focus on relevant data during their training, RAFT not only enhances the accuracy but also the adaptability of LLMs. As we continue to push the boundaries of what artificial intelligence can achieve, techniques like RAFT ensure that these technologies remain both powerful and practical for real-world applications.
 
-References
+#  References
 Zhang, T., Patil, S. G., Jain, N., Shen, S., Zaharia, M., Stoica, I., & Gonzalez, J. E. (2024). RAFT: Adapting Language Model to Domain Specific RAG. University of California, Berkeley.
 Wang, Q. (2024). Presentation on RAFT: Adapting Language Model to Domain Specific RAG.
