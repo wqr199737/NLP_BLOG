@@ -70,6 +70,20 @@ A key factor in enhancing training quality is the generation of a reasoning proc
 For all the datasets in our experiments, we generate the answers using the technique described above. Note that the Gorilla APIBench dataset, already includes reasoning in the answers. We provide an example of the generation step in Fig. 3, the detailed reasoning answer includes a citation from the original context inside ##begin_quote## and ##end_quote## as well as the detailed explanation on how to reach the conclusion based on the citations. We demonstrate that adding detailed reasoning paragraphs helps boost the model’s performance in our experiment section.
 
 
+# COT -  Chain-of-Thought
+
+![image](https://github.com/wqr199737/NLP_BLOG/blob/main/figure%20files/figure7.png)
+
+RAFT prompt to help LLM evaluate its own generated reasoning and answers, contrasting them with the correct reasoning and answers. The LLM is prompted to identify errors in its reasoning and extract key insights for improvement. This figure specifically represents the ‘GenerateExplanation‘ step in the RAFT algorithm (Section 3).
+
+We also conduct an analysis to evaluate the effectiveness of the Chain-of-Thought approach in enhancing the model’s performance. As indicated in Table 2, simply providing the answer to a question may not always be adequate. This approach can lead to a rapid decrease in loss, resulting in the training process to diverge. Incorporating a reasoning chain that not only guides the model to the answer but also enriches the model’s understanding can improve the overall accuracy. In our experiments, integrating the Chain-ofThought significantly enhances training robustness. We employ GPT-4-1106 to generate our Chain-of-Thought prompts and include an example of the prompt we used in figure above.
+
+An example of hotpot QA
+
+![image](https://github.com/wqr199737/NLP_BLOG/blob/main/figure%20files/figure8.png)
+
+Comparison of RAFT and DSF: We prompt RAFT and DSF fine-tuned models on the HotpotQA dataset. We can see that the DSF model extracts the wrong information from the context. For the question, who is the screenwriter, it responds with a film name. RAFT manages to get the result correctly .
+
 # Results and Impact
 
 We design our experiments to study how well RAFT performs compared to various baselines. We find that the RAFT7B model (a finetuned version of LlaMA-2) is better at reading and extracting information from in-domain documents,
